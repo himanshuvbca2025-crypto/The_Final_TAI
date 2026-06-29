@@ -15,6 +15,10 @@ DB_USER = os.getenv("DB_USER", "root")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
 DB_NAME = os.getenv("DB_NAME", "trinetra_ai")
 
+print("HOST =", DB_HOST,repr(DB_HOST))
+print("USER =", DB_USER,repr(DB_USER))
+print("DB =", DB_NAME,repr(DB_NAME))
+
 
 # ==========================================
 # DATABASE CONNECTION
@@ -24,7 +28,8 @@ def connect():
     return mysql.connector.connect(
         host=DB_HOST,
         user=DB_USER,
-        password=DB_PASSWORD
+        password=DB_PASSWORD,
+        database= DB_NAME
     )
 
 
