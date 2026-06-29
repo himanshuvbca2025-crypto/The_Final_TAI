@@ -14,6 +14,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
+app.secret_key = os.getenv("SECRET_KEY", "trinetra_ai_secret_2026")
 app.secret_key = os.getenv("SECRET_KEY")
 
 
