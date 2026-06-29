@@ -77,7 +77,7 @@ def registration():
             print(e)
             flash (str(e))
         
-    return render_template("dashboard.html")
+    return render_template("register.html")
 
 
 # ==========================================
@@ -145,8 +145,6 @@ def logout():
 
 if __name__ == "__main__":
     
-    create_database()
-    create_tables()
     app.run(
         debug=True
     )
