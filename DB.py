@@ -14,7 +14,7 @@ load_dotenv()
 DB_HOST = os.getenv("MYSQLHOST", "localhost")
 DB_USER = os.getenv("MYSQLUSER", "root")
 DB_PASSWORD = os.getenv("MYSQLPASSWORD", "")
-DB_NAME = os.getenv("MYSQLDATABASE") or os.getenv("MYSQL_DATABASE", "trinetra_ai")
+DB_NAME = os.getenv("MYSQLDATABASE", "railway")
 DB_PORT = int(os.getenv("MYSQLPORT") or 3306)
 
 print("HOST =", DB_HOST)
