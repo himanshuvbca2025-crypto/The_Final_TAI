@@ -1,0 +1,322 @@
+/* ================= GOOGLE FONT ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================= RESET ================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    min-height:100vh;
+
+    background:url("../images/back.png") center center/cover no-repeat fixed;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.72);
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+
+    width:1050px;
+
+    min-height:620px;
+
+    display:flex;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    position:relative;
+
+    z-index:10;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+/* ================= LEFT ================= */
+
+.left-panel{
+
+    width:45%;
+
+    background:rgba(0,0,0,.25);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    width:260px;
+
+    margin-bottom:30px;
+
+}
+
+.left-panel h1{
+
+    color:white;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.left-panel p{
+
+    color:#ddd;
+
+    line-height:32px;
+
+}
+
+/* ================= RIGHT ================= */
+
+.right-panel{
+
+    width:55%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px;
+
+}
+
+/* ================= FORM ================= */
+
+.login-form{
+
+    width:100%;
+
+}
+
+.login-form h2{
+
+    color:white;
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-bottom:35px;
+
+}
+
+/* ================= INPUT ================= */
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    height:58px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:12px;
+
+    padding:0 18px;
+
+    margin-bottom:20px;
+
+}
+
+.input-box i{
+
+    color:#7CFC00;
+
+    width:30px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.input-box input::placeholder{
+
+    color:#d5d5d5;
+
+}
+
+/* ================= OPTIONS ================= */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+.options a{
+
+    color:#7CFC00;
+
+    text-decoration:none;
+
+}
+
+.options label{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+}
+
+/* ================= BUTTON ================= */
+
+.login-btn{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#43A047;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#2E7D32;
+
+    transform:translateY(-3px);
+
+}
+
+/* ================= REGISTER ================= */
+
+.register-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:white;
+
+}
+
+.register-link a{
+
+    color:#7CFC00;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .container{
+
+        width:95%;
+
+        flex-direction:column;
+
+    }
+
+    .left-panel,
+    .right-panel{
+
+        width:100%;
+
+    }
+
+}

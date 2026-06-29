@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TRINETRA AI | Login</title>
+
+    <link rel="icon" type="image/png"
+          href="{{ url_for('static', filename='images/Icon.png') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/login.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+    <!-- ================= LEFT ================= -->
+
+    <div class="left-panel">
+
+        <img src="{{ url_for('static', filename='images/Primary.png') }}"
+             class="logo">
+
+        <h1>Welcome Back</h1>
+
+        <p>
+
+            Login to access your AI Powered Rural Operating System.
+
+            Get Weather Intelligence, AI Assistant,
+            Krishi Bazaar, Krishi Gurukul,
+            Government Schemes and much more.
+
+        </p>
+
+    </div>
+
+    <!-- ================= RIGHT ================= -->
+
+    <div class="right-panel">
+
+        <form action="/login"
+              method="POST"
+              class="login-form">
+
+            <h2>Login</h2>
+
+            <!-- Email -->
+
+            <div class="input-box">
+
+                <i class="fas fa-envelope"></i>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Email Address"
+                       required>
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="input-box">
+
+                <i class="fas fa-lock"></i>
+
+                <input type="password"
+                       name="password"
+                       placeholder="Password"
+                       required>
+
+            </div>
+
+            <!-- Remember -->
+
+            <div class="options">
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Remember Me
+
+                </label>
+
+                <a href="#">
+
+                    Forgot Password?
+
+                </a>
+
+            </div>
+
+            <!-- Button -->
+
+            <button
+                type="submit"
+                class="login-btn">
+
+                Login
+
+            </button>
+
+            <div class="register-link">
+
+                Don't have an account?
+
+                <a href="/registration">
+
+                    Register
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

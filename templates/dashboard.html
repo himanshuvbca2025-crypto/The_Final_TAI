@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TRINETRA AI Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+    <link rel="icon"
+          href="{{ url_for('static', filename='images/Icon.png') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <img src="{{ url_for('static', filename='images/Secondry.png') }}">
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <a href="/dashboard">
+                <i class="fas fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/assistant">
+                <i class="fas fa-robot"></i>
+                <span>AI Assistant</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/climate">
+                <i class="fas fa-cloud-sun"></i>
+                <span>Climate Intelligence</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/water">
+                <i class="fas fa-droplet"></i>
+                <span>Water Management</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/disease">
+                <i class="fas fa-seedling"></i>
+                <span>Disease Detection</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/bazaar">
+                <i class="fas fa-store"></i>
+                <span>Krishi Bazaar</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/gurukul">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Krishi Gurukul</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/schemes">
+                <i class="fas fa-building-columns"></i>
+                <span>Govt Schemes</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/alerts">
+                <i class="fas fa-triangle-exclamation"></i>
+                <span>Disaster Alerts</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/community">
+                <i class="fas fa-users"></i>
+                <span>Community</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/isro">
+                <i class="fas fa-satellite"></i>
+                <span>ISRO Intelligence</span>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<div class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="search-box">
+
+            <i class="fas fa-search"></i>
+
+            <input type="text"
+                   placeholder="Search anything...">
+
+        </div>
+
+        <div class="profile">
+
+            <img src="{{ url_for('static', filename='images/user.png') }}">
+
+            <div>
+
+                <h4>{{ user_name }}</h4>
+
+                <p>Farmer</p>
+
+            </div>
+
+        </div>
+
+    </header>
+        <!-- ================= WELCOME SECTION ================= -->
+
+    <section class="welcome-section">
+
+        <!-- LEFT CONTENT -->
+
+        <div class="welcome-left">
+
+            <h1>
+
+                Welcome,
+                <span>{{ user_name }}</span>
+                👋
+
+            </h1>
+
+            <h2>
+
+                AI Powered Rural Operating System
+
+            </h2>
+
+            <p>
+
+                TRINETRA AI empowers farmers with Artificial Intelligence,
+                Climate Intelligence, Crop Disease Detection,
+                Smart Irrigation, Krishi Bazaar, Government Schemes,
+                Satellite Analytics and Rural Digital Services.
+
+            </p>
+
+            <div class="welcome-buttons">
+
+                <a href="/assistant" class="start-btn">
+
+                    <i class="fas fa-robot"></i>
+
+                    AI Assistant
+
+                </a>
+
+                <a href="/climate" class="secondary-btn">
+
+                    <i class="fas fa-cloud-sun"></i>
+
+                    Climate Intelligence
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+
+        <div class="welcome-right">
+
+            <img src="{{ url_for('static', filename='images/welcode.png') }}"
+                 alt="TRINETRA AI Farmer">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUICK STATS ================= -->
+
+    <section class="stats-section">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fas fa-cloud-sun"></i>
+
+            </div>
+
+            <div class="stat-info">
+
+                <h2>28°C</h2>
+
+                <p>Today's Weather</p>
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fas fa-seedling"></i>
+
+            </div>
+
+            <div class="stat-info">
+
+                <h2>Healthy</h2>
+
+                <p>Crop Status</p>
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fas fa-droplet"></i>
+
+            </div>
+
+            <div class="stat-info">
+
+                <h2>82%</h2>
+
+                <p>Water Level</p>
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fas fa-bell"></i>
+
+            </div>
+
+            <div class="stat-info">
+
+                <h2>03</h2>
+
+                <p>Active Alerts</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ================= AI MODULES ================= -->
+
+    <section class="modules-section">
+
+        <h2 class="section-heading">
+
+            AI Powered Services
+
+        </h2>
+
+        <div class="module-grid">
+
+            <!-- Climate -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-cloud-sun"></i>
+
+                </div>
+
+                <h3>Climate Intelligence</h3>
+
+                <p>
+
+                    Hyper-local weather forecast, rainfall prediction,
+                    climate risk analysis and farming advisory powered by AI.
+
+                </p>
+
+                <a href="/climate" class="module-btn">
+
+                    Open Module
+
+                </a>
+
+            </div>
+
+            <!-- AI Assistant -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-robot"></i>
+
+                </div>
+
+                <h3>AI Assistant</h3>
+
+                <p>
+
+                    Ask farming questions, get instant crop guidance,
+                    fertilizer recommendations and AI support.
+
+                </p>
+
+                <a href="/assistant" class="module-btn">
+
+                    Open Module
+
+                </a>
+
+            </div>
+
+            <!-- Disease -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-seedling"></i>
+
+                </div>
+
+                <h3>Disease Detection</h3>
+
+                <p>
+
+                    Upload crop images and detect diseases using
+                    Artificial Intelligence within seconds.
+
+                </p>
+
+                <a href="/disease" class="module-btn">
+
+                    Open Module
+
+                </a>
+
+            </div>
+
+            <!-- Water -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-droplet"></i>
+
+                </div>
+
+                <h3>Water Management</h3>
+
+                <p>
+
+                    Smart irrigation planning, groundwater monitoring
+                    and AI-based water conservation insights.
+
+                </p>
+
+                <a href="/water" class="module-btn">
+
+                    Open Module
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= AGRICULTURE SERVICES ================= -->
+
+    <section class="modules-section">
+
+        <h2 class="section-heading">
+
+            Rural Development Services
+
+        </h2>
+
+        <div class="module-grid">
+
+            <!-- Bazaar -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-store"></i>
+
+                </div>
+
+                <h3>Krishi Bazaar</h3>
+
+                <p>
+
+                    Buy and sell agricultural products directly,
+                    connect with verified buyers and farmers.
+
+                </p>
+
+                <a href="/bazaar" class="module-btn">
+
+                    Open Module
+
+                </a>
+
+            </div>
+
+            <!-- Gurukul -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-graduation-cap"></i>
+
+                </div>
+
+                <h3>Krishi Gurukul</h3>
+
+                <p>
+
+                    Learn modern farming techniques, organic farming,
+                    AI agriculture and expert practices.
+
+                </p>
+
+                <a href="/gurukul" class="module-btn">
+
+                    Open Module
+
+                </a>
+
+            </div>
+
+            <!-- Govt -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-building-columns"></i>
+
+                </div>
+
+                <h3>Government Schemes</h3>
+
+                <p>
+
+                    Discover subsidies, PM Kisan schemes,
+                    insurance benefits and farmer welfare programs.
+
+                </p>
+
+                <a href="/schemes" class="module-btn">
+
+                    Open Module
+
+                </a>
+
+            </div>
+
+            <!-- Disaster -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-triangle-exclamation"></i>
+
+                </div>
+
+                <h3>Disaster Alerts</h3>
+
+                <p>
+
+                    Receive flood, cyclone, heatwave and
+                    emergency alerts in real time.
+
+                </p>
+
+                <a href="/alerts" class="module-btn">
+
+                    Open Module
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ================= ADVANCED MODULES ================= -->
+
+    <section class="modules-section">
+
+        <h2 class="section-heading">
+
+            Advanced Intelligence
+
+        </h2>
+
+        <div class="module-grid">
+
+            <!-- ISRO -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-satellite"></i>
+
+                </div>
+
+                <h3>ISRO Intelligence</h3>
+
+                <p>
+
+                    Satellite imagery, NDVI monitoring, land analysis,
+                    crop health mapping and geospatial insights.
+
+                </p>
+
+                <a href="/isro" class="module-btn">
+
+                    Explore
+
+                </a>
+
+            </div>
+
+            <!-- Community -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-users"></i>
+
+                </div>
+
+                <h3>Farmer Community</h3>
+
+                <p>
+
+                    Connect with farmers, agriculture experts,
+                    researchers and share farming experiences.
+
+                </p>
+
+                <a href="/community" class="module-btn">
+
+                    Join Community
+
+                </a>
+
+            </div>
+
+            <!-- Analytics -->
+
+            <div class="module-card">
+
+                <div class="module-icon">
+
+                    <i class="fas fa-chart-line"></i>
+
+                </div>
+
+                <h3>AI Analytics</h3>
+
+                <p>
+
+                    View crop trends, weather analytics,
+                    farm performance and AI-generated reports.
+
+                </p>
+
+                <a href="/analytics" class="module-btn">
+
+                    View Reports
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RECENT ACTIVITY ================= -->
+
+    <section class="activity-section">
+
+        <h2 class="section-heading">
+
+            Recent Activity
+
+        </h2>
+
+        <div class="activity-list">
+
+            <div class="activity-item">
+
+                <i class="fas fa-cloud-sun"></i>
+
+                <div>
+
+                    <h4>Weather Updated</h4>
+
+                    <p>Latest climate forecast has been synchronized.</p>
+
+                </div>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="fas fa-seedling"></i>
+
+                <div>
+
+                    <h4>Crop Analysis Completed</h4>
+
+                    <p>AI analyzed your crop health successfully.</p>
+
+                </div>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="fas fa-droplet"></i>
+
+                <div>
+
+                    <h4>Water Advisory</h4>
+
+                    <p>Recommended irrigation schedule is available.</p>
+
+                </div>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="fas fa-bell"></i>
+
+                <div>
+
+                    <h4>Government Update</h4>
+
+                    <p>New agriculture subsidy has been announced.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="dashboard-footer">
+
+        <p>
+
+            © 2026 TRINETRA AI |
+            Empowering Rural India with Artificial Intelligence
+
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>
+

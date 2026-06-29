@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TRINETRA AI</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="{{ url_for('static', filename='images/Icon.png') }}">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/Secondry.png') }}">
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#hero">Home</a></li>
+
+            <li><a href="#features">Features</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+        <div class="buttons">
+
+            <a href="/login" class="login-btn">Login</a>
+
+            <a href="/registration" class="register-btn">Register</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <img src="{{ url_for('static', filename='images/Primary.png') }}"
+            class="hero-logo">
+
+        <h1>The Third Eye of Rural Climate Intelligence</h1>
+
+        <p>
+
+            TRINETRA AI is an AI Powered Rural Operating System
+            designed to See, Predict, Protect and Prosper India's
+            villages through Climate Intelligence, Artificial
+            Intelligence, Satellite Analytics, Water Management,
+            Krishi Bazaar, Krishi Gurukul and Sustainable Agriculture.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="/registration" class="get-started">
+                Get Started
+            </a>
+
+            <a href="#features" class="learn-more">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+      
+    <div class="hero-right">
+
+        <img src="{{ url_for('static', filename='images/indian.png') }}"
+            class="hero-image">
+
+    </div>
+
+</section>
+
+
+<!-- ================= CORE FEATURES ================= -->
+
+<section id="features">
+
+    <div class="section-title">
+
+        <h2>AI Powered Rural Ecosystem</h2>
+
+        <p>
+            One Platform • Multiple AI Powered Rural Solutions
+        </p>
+
+    </div>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+
+            <div class="icon">🌦</div>
+
+            <h3>Climate Intelligence</h3>
+
+            <p>
+                AI weather advisory, climate prediction and hyper-local forecasts.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🤖</div>
+
+            <h3>AI Crop Assistant</h3>
+
+            <p>
+                Crop disease detection, farming guidance and smart AI assistance.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">💧</div>
+
+            <h3>Water Management</h3>
+
+            <p>
+                Smart irrigation, water budgeting and satellite monitoring.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🚨</div>
+
+            <h3>Disaster Management</h3>
+
+            <p>
+                Flood alerts, cyclone warnings and emergency preparedness.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🏛</div>
+
+            <h3>Government Schemes</h3>
+
+            <p>
+                AI-powered eligibility checking and subsidy recommendations.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🛒</div>
+
+            <h3>Krishi Bazaar</h3>
+
+            <p>
+                Buy and sell agricultural products directly without middlemen.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🎓</div>
+
+            <h3>Krishi Gurukul</h3>
+
+            <p>
+                Learn organic farming, AI agriculture and modern techniques.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">♻️</div>
+
+            <h3>Waste to Wealth</h3>
+
+            <p>
+                Convert agricultural waste into compost and valuable resources.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🤝</div>
+
+            <h3>Community Network</h3>
+
+            <p>
+                Share knowledge, receive village alerts and collaborate together.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="icon">🛰</div>
+
+            <h3>ISRO Intelligence</h3>
+
+            <p>
+                Satellite analytics, NDVI monitoring and predictive insights.
+            </p>
+
+            <a href="/login" class="explore-btn">Explore →</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="section-title">
+
+        <h2>About TRINETRA AI</h2>
+
+        <p>
+
+            TRINETRA AI is an AI-powered smart agriculture platform
+            that helps farmers with crop disease detection,
+            climate advisory, irrigation, government schemes,
+            disaster alerts and sustainable farming.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <p>
+
+        © 2026 TRINETRA AI | All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<script>
+
+let lastScroll = 0;
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+    const currentScroll = window.pageYOffset;
+
+    if(currentScroll > lastScroll && currentScroll > 100){
+
+        navbar.classList.add("hide");
+
+    }else{
+
+        navbar.classList.remove("hide");
+
+    }
+
+    lastScroll = currentScroll;
+
+});
+
+</script>
+</body>
+
+</html>
