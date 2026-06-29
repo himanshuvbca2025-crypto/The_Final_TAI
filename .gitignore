@@ -10,4 +10,6 @@ venv/
 .vscode/
 
 # macOS
-.DS_Store
+.DS_Storevenv/
+__pycache__/
+.env
