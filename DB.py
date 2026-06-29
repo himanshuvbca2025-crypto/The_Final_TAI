@@ -14,8 +14,7 @@ DB_HOST = os.getenv("MYSQLHOST", "localhost") or os.getenv("DB_HOST", "localhost
 DB_USER = os.getenv("MYSQLUSER", "root")or os.getenv("DB_USER","root")
 DB_PASSWORD = os.getenv("MYSQLPASSWORD", "") or os.getenv("DB_PASSWORD", "")
 DB_NAME = os.getenv("MYSQLDATABASE") or os.getenv("MYSQL_DATABASE") or os.getenv("DB_NAME", "trinetra_ai")
-DB_PORT = int(os.getenv("MYSQLPORT")) or os.getenv("DB_PORT", 3306)
-
+DB_PORT = int(os.getenv("MYSQLPORT", os.getenv("DB_PORT", "3306")))
 print("MYSQLDATABASE =", os.getenv("MYSQLDATABASE"))
 print("MYSQL_DATABASE =", os.getenv("MYSQL_DATABASE"))
 print("DB_NAME =", DB_NAME)
