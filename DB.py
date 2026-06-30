@@ -20,6 +20,7 @@ DB_PORT = int(os.getenv("MYSQLPORT") or 3306)
 print("HOST =", DB_HOST)
 print("USER =", DB_USER)
 print("DB =", DB_NAME)
+print("PASSWORD EXISTS =", bool(DB_PASSWORD))
 
 # ==========================================
 # DATABASE CONNECTION
